@@ -1,0 +1,20 @@
+body{ 
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+}
+.fondo1{ 
+    position: fixed;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.text{
+    position: fixed;
+    top: 50%;
+    left: 15%;
+}
+.expl{
+    color: aliceblue;
+    font-size: 2vw;
+
+}

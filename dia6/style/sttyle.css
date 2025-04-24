@@ -1,0 +1,45 @@
+body{ 
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.fondo1{ 
+    position: fixed;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.boton1{
+    position: absolute;
+    top: 50%;
+    align-items: center;
+    left: 40%;
+}
+.play{
+    background-color: #bab9b9;
+    color: black;
+    height: 2.5vw;
+    width: 19vw;
+    border-color:#228B22 ;
+    border-radius: 0.5vw;
+    font-weight: 900;
+    font-size: 1vw;
+}
+.boton2{
+    position: absolute;
+    top: 60%;
+    align-items: center;
+    left: 42.5%;
+    color: brown;
+    
+}
+.help{
+    background-color: #A9A9A9;
+    color: black;
+    height: 2.5vw;
+    width: 15vw;
+    border-color:#228B22 ;
+    border-radius: 0.5vw;
+    font-weight: 900;
+    font-size: 1vw;
+}

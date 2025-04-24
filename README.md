@@ -4,8 +4,8 @@ este github contendra los trabajos de la skill de HTML
 ## Tabla de contenidos
 | Indice| titulo |
 |--|--|
-| 1 |  [dia1]() |
-| 2 | [dia2] () |
+| 1 |[dia1]() |
+| 2 |[dia2] () |
 | 3 | [dia3]() | 
 | 4 | [dia4]() | 
 | 5 | [dia5]() | 
