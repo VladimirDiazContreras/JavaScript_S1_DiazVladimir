@@ -31,6 +31,8 @@ async function startGame() {
   hitBtn.disabled = false;
   standBtn.disabled = false;
 
+  
+
   // Repartir dos cartas al jugador y al crupier
   const drawRes = await fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=4`);
   const drawData = await drawRes.json();
