@@ -17,11 +17,11 @@ este git del proyecto  de la skiil de python con la modificacion de que haro est
 ### como ejecutar 
 Deberás dar clik en  este link  para ejecutar  
 
-[link]()
+[link](https://vladimirdiazcontreras.github.io/JavaScript_S1_DiazVladimir/dia1)
 
 
 ### explicación  
-ejecutamos main.py por que en este archivo estamos importando todas las funciones de los demás archivos  
+este proyecto se basa en un plataforma paraa campuslands ejecutada con aletras creadas mediante java scipt  
 
 
-Hecho por [Vladimir Diaz Contreras](https://github.com/VladimirDiazContreras)  y juan saavedra
+Hecho por [Vladimir Diaz Contreras](https://github.com/VladimirDiazContreras) 
