@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "titulo";
+  src: url('../storage/fonts/WorkSans-Regular.ttf');
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: linear-gradient(to right, #5c6368,#1b2d3d);
+}
+.todito{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+}
+h1{
+  margin-top: 10vw;
+  margin-bottom: 3vw;
+  color: white;
+  font-family: "titulo",sans-serif;
+  font-size: 6vw;
+}
+input{
+  position: relative;
+  font-size: 2vw;
+  color: white;
+  border-color: black;
+  background-color: rgba(0,0,0,0.5);
+  border-top-left-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+  padding-left: 1vw;
+  padding-right: 10vw;
+  height: 7vh;
+}
+.boton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  width: 7vw;
+  height: 7vh;
+  font-size: 1vw;
+  border-bottom-right-radius: 2vw;
+  border-top-right-radius: 2vw;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.capsula{
+  display: flex;
+  width: 30vw;
+  height: 8vh;
+  gap: 1vw;
+  background-color: black;
+  border-radius: 2vw;
+  justify-content: center;
+  align-items: center;
+  padding: 2.2vw;
+}
+.infotext{
+  width: 15vw;
+}
+.text_task{
+  font-size: 2.5vw;
+  color: white;
+}
+.botones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+}
+.terminado_img{
+  width: 3vw;
+  height: 6vh;
+}
+.eliminado_img{
+  width: 2.5vw;
+  height: 5vh;
+}
+.terminado{
+  display: flex;
+  background-color: white;
+  border-radius: 12vw;
+  width: 3.3vw;
+  height: 3.3vw;
+  justify-content: center;
+  align-items: center;
+}
+.eliminado{
+  display: flex;
+  background-color: white;
+  border-radius: 12vw;
+  width: 3.3vw;
+  height: 3.3vw;
+  justify-content: center;
+  align-items: center;
+}
