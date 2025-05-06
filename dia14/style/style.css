@@ -1,29 +1,12 @@
-body {
-    background-color: white;
-  }
-  
-  h1 {
-    color: #343a40;
-  }
-  
-  .table img {
-    width: 100px;
-    height: auto;
-    object-fit: cover;
-  }
-
-.todito{
-    border-color: black;
+form label {
+  font-weight: 500;
 }
 
-.hola{
-    border: 10px;
+form input,
+form textarea {
+  border-radius: 5px;
 }
-.container{
-    border: 1px solid black;
-}
-.tbl1{
 
-
-    
+.btn {
+  margin-right: 8px;
 }
