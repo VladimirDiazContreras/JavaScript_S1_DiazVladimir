@@ -15,6 +15,9 @@ este github contendra los trabajos del dia 15
 ### como ejecutar 
 paraejecutar la pagina web debes entrar a este  [link](https://vladimirdiazcontreras.github.io/JavaScript_S1_DiazVladimir/dia15)  
 
+[diseño](https://www.figma.com/design/qaHyMJ4kKsYFC1Xlyxsa0i/animalitos?t=33qK8ZH1or6FSego-1)
+
+
 
 
 ### explicación  
