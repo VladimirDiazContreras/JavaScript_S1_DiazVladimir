@@ -1,7 +1,7 @@
 const API_URL = 'https://6813a6ea129f6313e211f47a.mockapi.io/api1/restaurante/superheroes';
 
 const form = document.getElementById("heroeForm");
-const nombrePersonajeInput = document.getElementById("nombrePersonaje");
+const nombrePersonajeInput = document.getElementById("nombre_personaje");
 const nombreActorInput = document.getElementById("nombreActor");
 const edadActorInput = document.getElementById("edadActor");
 const ubicacionInput = document.getElementById("ubicacion");
@@ -26,8 +26,8 @@ function renderizarTabla(heroes) {
   heroes.forEach(heroe => {
     const fila = document.createElement("tr");
     fila.innerHTML = `
-      <td><img src="${heroe.poster}" alt="${heroe.nombrePersonaje}" class="img-fluid" style="max-width: 100px;" /></td>
-      <td>${heroe.nombrePersonaje}</td>
+      <td><img src="${heroe.poster}" alt="${heroe.nombre_personaje}" class="img-fluid" style="max-width: 100px;" /></td>
+      <td>${heroe.nombre_personaje}</td>
       <td>${heroe.nombreActor}</td>
       <td>${heroe.edadActor}</td>
       <td>${heroe.ubicacion}</td>
@@ -44,7 +44,7 @@ function renderizarTabla(heroes) {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const nuevoHeroe = {
-    nombrePersonaje: nombrePersonajeInput.value.trim(),
+    nombre_personaje: nombrePersonajeInput.value.trim(),
     nombreActor: nombreActorInput.value.trim(),
     edadActor: parseInt(edadActorInput.value),
     ubicacion: ubicacionInput.value.trim(),
@@ -76,7 +76,7 @@ function editarHeroe(id) {
   axios.get(`${API_URL}/${id}`)
     .then(response => {
       const heroe = response.data;
-      nombrePersonajeInput.value = heroe.nombrePersonaje;
+      nombrePersonajeInput.value = heroe.nombre_personaje;
       nombreActorInput.value = heroe.nombreActor;
       edadActorInput.value = heroe.edadActor;
       ubicacionInput.value = heroe.ubicacion;
@@ -122,3 +122,4 @@ if (!document.getElementById("tablaPlatos")) {
 }
 
 cargarDatos();
+
