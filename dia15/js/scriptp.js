@@ -37,15 +37,23 @@ async function fetchInitialPets() {
 function renderPets(pets, container) {
   container.innerHTML = '';
   pets.forEach(pet => {
+    const photoUrl = pet.photos[0]?.medium || 'https://www.diariodenavarra.es/uploads/2021/02/18/60ae5c9db9f42.jpeg';
+
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
-      <img src="${pet.photos[0]?.medium || 'https://www.diariodenavarra.es/uploads/2021/02/18/60ae5c9db9f42.jpeg'}" alt="${pet.name}" />
+      <img src="${photoUrl}" alt="${pet.name}" />
       <div class="card-body">
         <h3>${pet.name}</h3>
         <p>${pet.type} - ${pet.breeds.primary}</p>
         <p>${pet.age} - ${pet.contact.address.city || 'Ubicación desconocida'}</p>
-        <button class="favorite-btn" onclick="toggleFavorite(${pet.id}, '${pet.name}')">
+        <button class="favorite-btn" onclick="toggleFavorite(
+          ${pet.id},
+          '${pet.name.replace(/'/g, "\\'")}',
+          '${pet.type}',
+          '${photoUrl}',
+          '${pet.age}'
+        )">
           ${isFavorite(pet.id) ? '💖' : '🤍'}
         </button>
       </div>
@@ -63,16 +71,18 @@ function isFavorite(id) {
   return getFavorites().some(pet => pet.id === id);
 }
 
-function toggleFavorite(id, name, type, photos, age) {
+function toggleFavorite(id, name, type, photoUrl, age) {
   const favorites = getFavorites();
   const index = favorites.findIndex(pet => pet.id === id);
+
   if (index > -1) {
     favorites.splice(index, 1);
-    alert(`Quitado de favoritos: ${name, type, photos, age}`);
+    alert(`Quitado de favoritos: ${name}`);
   } else {
-    favorites.push({ id, name, type, photos, age});
-    alert(`Agregado a favoritos: ${name, type, photos, age}`);
+    favorites.push({ id, name, type, photoUrl, age });
+    alert(`Agregado a favoritos: ${name}`);
   }
+
   localStorage.setItem('favorites', JSON.stringify(favorites));
   fetchInitialPets();
   renderFavoriteList();
@@ -82,6 +92,7 @@ function toggleFavorite(id, name, type, photos, age) {
 function renderFavoriteList() {
   const favorites = getFavorites();
   favoriteList.innerHTML = '';
+
   if (favorites.length === 0) {
     favoriteList.innerHTML = '<p>No tienes favoritos aún.</p>';
     return;
@@ -91,10 +102,18 @@ function renderFavoriteList() {
     const div = document.createElement('div');
     div.className = 'card';
     div.innerHTML = `
+      <img src="${pet.photoUrl}" alt="${pet.name}" />
       <div class="card-body">
         <h3>${pet.name}</h3>
-        <p>${pet.type} - ${pet.breeds.primary}</p>
-        <button class="favorite-btn" onclick="toggleFavorite(${pet.id}, '${pet.name}')">❌</button>
+        <p>${pet.type}</p>
+        <p>age: ${pet.age}</p>
+        <button class="favorite-btn" onclick="toggleFavorite(
+          ${pet.id},
+          '${pet.name.replace(/'/g, "\\'")}',
+          '${pet.type}',
+          '${pet.photoUrl}',
+          '${pet.age}'
+        )">❌ Quitar</button>
       </div>
     `;
     favoriteList.appendChild(div);
